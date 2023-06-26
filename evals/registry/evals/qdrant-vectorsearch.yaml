@@ -1,0 +1,10 @@
+qdrant-vectorsearch:
+  id: qdrant-vectorsearch.dev.v0
+  metrics: [accuracy]
+  description: Accurately generate the API request payload with the correct syntax for performing vector search in Qdrant DB.
+qdrant-vectorsearch.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: qdrant-vectorsearch/samples.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: qdrant
